@@ -4,10 +4,12 @@ public class BasicMathPractice {
 
 	public static void main(String[] args) {
 //		evenlyDivides(22074);
-		int n = -42;
-		System.out.println(n - n * 2);
+//		reverse(-123);
 	}
 	
+	/*
+	 * https://www.geeksforgeeks.org/problems/count-digits5716/1
+	 * */
     static int evenlyDivides(int N){
         
         int count = 0;
@@ -24,7 +26,6 @@ public class BasicMathPractice {
     
     /*
      * https://leetcode.com/problems/reverse-integer/
-     * 
      * */
     public static int reverse(int x) {
         int temp = Math.abs(x);
