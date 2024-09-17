@@ -45,5 +45,49 @@ public class BasicMathPractice {
         if(x < 0) return (int) (-1 * ans);
         return (int) ans;
     }
+    
+    /*
+     * https://www.geeksforgeeks.org/problems/lcm-and-gcd4516/1
+     * */
+    static Long[] lcmAndGcd(Long A , Long B) {
+        Long[] ans = new Long[2];
+        
+        long gcd = findGcd(A, B);
+        long prod = A * B;
+        long lcm = prod / gcd;
+        ans[0] = lcm;
+        ans[1] = gcd;
+        return ans;
+    }
+    
+    static long findGcd(long a, long b){
+        if( a == 0){
+            return b;
+        }
+        
+        return findGcd(b%a,a);
+    }
+    
+    /*
+     * https://www.geeksforgeeks.org/problems/sum-of-all-divisors-from-1-to-n4738/1
+     * */
+    static long sumOfDivisors(int N){
+        long sum = 0;
+       for(int i = 1; i <= N; i++){
+        //   sum += findDivisors(i);
+        sum += i * (N / i);
+       }
+       return sum;
+    }
+    
+    static long findDivisors(int val){
+        long sum = 0;
+        for(int i = 1; i<= val; i++){
+            if(val % i == 0){
+               sum += i;
+            }
+        }
+        return sum;
+    }
 
 }
