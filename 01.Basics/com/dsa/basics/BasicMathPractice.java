@@ -5,6 +5,7 @@ public class BasicMathPractice {
 	public static void main(String[] args) {
 //		evenlyDivides(22074);
 //		reverse(-123);
+		System.out.println(checkPrime(4));
 	}
 	
 	/*
@@ -89,5 +90,23 @@ public class BasicMathPractice {
         }
         return sum;
     }
-
+    
+    static boolean checkPrime(int n) {
+    	int cnt = 0;
+    	
+    	for(int i = 1; i * i <= n; i++) {
+    		if(n % i == 0) {
+    			cnt = cnt + 1;
+    			if(n / i != i) {
+    				cnt++;
+    			}
+    		}
+    	}
+    	
+    	if(cnt == 2) {
+    		return true;
+    	}
+    	
+    	return false;
+    }
 }
