@@ -11,7 +11,22 @@ public class QuickSortDemo {
 		}
 
 	}
-
+	/*
+	 * step 1 : select the pivot element
+	 * step 2 : insert pivot element into its correct position
+	 * 
+	 *  --> smaller on the left and greater on the right
+	 *  
+	 * while doing the task of inserting pivot element at its correct 
+	 * position we can observe one thing that all the left elements in
+	 * the array to the pivot elements are lesser and all right elements 
+	 * to the pivot will be greater
+	 * 
+	 * pivot element can be : start element of array
+	 *                        end element of array
+	 *                        mid element of array
+	 *                        random element of array
+	 * */
 	private static void quickSort(int[] arr, int low, int high) {
 		
 		if(low >= high) {
